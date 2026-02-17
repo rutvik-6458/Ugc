@@ -23,8 +23,8 @@ export interface Project {
     userPrompt?: string;
     aspectRatio: string;
     targetLength?: number;
-    genratedImage?: string;
-    genratedVideo?: string;
+    generatedImage?: string;
+    generatedVideo?: string;
     isGenerating: boolean;
     isPublished: boolean;
     error?: string;

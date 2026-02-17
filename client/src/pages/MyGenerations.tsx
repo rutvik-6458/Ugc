@@ -14,7 +14,8 @@ const MyGenerations = () => {
     // Simulating fetching current user's projects
     setTimeout(() => {
       // In a real app, we'd filter by user ID
-      setProjects(dummyGenerations.filter(p => !p.isPublished));
+        setProjects(dummyGenerations.filter(p => !p.isPublished));
+    //   setProjects([]);
       setLoading(false);
     }, 1000);
   }, []);
@@ -74,10 +75,10 @@ const MyGenerations = () => {
             </p>
             <Link
               to="/generate"
-              className="text-violet-400 hover:text-violet-300 font-medium flex items-center gap-2"
+              className="group relative flex items-center gap-3 bg-violet-600 hover:bg-violet-500 text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs transition-all shadow-xl shadow-violet-600/20 active:scale-95"
             >
-              Go to Generator
-              <PlusIcon className="size-4" />
+              <span>Create New Generaction</span>
+              <PlusIcon className="size-4 group-hover:rotate-90 transition-transform duration-300" />
             </Link>
           </div>
         )}
